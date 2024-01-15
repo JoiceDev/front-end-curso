@@ -5,11 +5,14 @@
 }
 
 header,
-section h2 {
+section h2,
+section h3,
+form button {
     font-family: "Bungee", sans-serif;
+    font-weight: normal;
 }
 
-body {
+body, input, textarea {
     font-family: "Roboto", sans-serif;
 }
 
@@ -21,7 +24,6 @@ header {
 
 header h1 {
     font-size: 36px;
-    font-weight: normal;
 }
 
 section h2 {
@@ -83,4 +85,65 @@ section p {
 
 .store-front {
     margin-right: 32px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+#contact .container {
+    display: block;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea {
+    resize: none;
+    height: 150px;
+}
+
+section h3 {
+    margin-bottom: 26px;
+}
+
+form button {
+    background-color: midnightblue;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(70, 70, 139);
+}
+
+input:focus, textarea:focus {
+    outline-color: midnightblue;
+}
+
+footer {
+    background-color: midnightblue;
+    color: aliceblue;
+    padding: 16px 0;
 }
