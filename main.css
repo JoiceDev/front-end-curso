@@ -5,11 +5,14 @@
 }
 
 header,
-section h2 {
+section h2,
+form button {
     font-family: "Dancing Script", cursive;
 }
 
-body {
+body,
+input,
+textarea {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -128,6 +131,7 @@ form button {
 
 form textarea {
     resize: none;
+    height: 180px;
 }
 
 .logo-list li{
@@ -139,5 +143,26 @@ form textarea {
     text-decoration: none;
 }
 
+form button {
+    background-color: goldenrod;
+    color: whitesmoke;
+    border: none;
+    font-weight: bolder;
+    font-size:larger;
+    cursor: pointer;
+}
 
+form button:hover {
+    background-color: rgb(205, 172, 90);
+}
+
+input:focus, textarea:focus {
+    outline-color: goldenrod;
+}
+
+footer {
+    background-color: goldenrod;
+    color: whitesmoke;
+    padding: 16px 0;
+}
 
