@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+header,
+section h2 {
+    font-family: "Dancing Script", cursive;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header {
     padding: 16px 0;
     background-color: goldenrod;
@@ -18,7 +30,7 @@ header li a {
 header nav li {
     display: inline;
     margin-left: 16px;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .container {
@@ -50,5 +62,51 @@ section .container img {
 section .container p {
     display: flex;
 }
+
+#about .container {
+    display: flex;
+    align-items: center;
+}
+
+#about img {
+    flex: 1;
+    max-width: 50%;
+}
+
+#about div {
+    flex: 1;
+    padding: 0 20px;
+}
+
+#about .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    color: goldenrod;
+}
+
+section p{
+    margin-bottom: 8px;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+.logo-list img {
+    height: 24px;
+}
+
+.treatments-list img{
+    display: inline;
+    margin-right: 8px;
+}
+
 
 
