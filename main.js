@@ -5,11 +5,12 @@ form.addEventListener('submit', function(e) {
     const inputContactName = document.getElementById ('contact-name');
     const inputPhoneNumber = document.getElementById ('phone-number');
 
-    let row = '<tr>';
-    row += ´<td>${inputContactName.value}</td>´;
-    row += ´<td>${inputPhoneNumber.value}</td>´;
-    row += '</tr>'
+    let row = '';
+    row += `${inputContactName.value}`;
+    row += `${inputPhoneNumber.value}`;
+    row += '';
 
     const tablebody = document.querySelector('tbody');
+    
     tablebody.innerHTML = row;
 });
