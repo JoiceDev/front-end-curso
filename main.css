@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgba(42, 161, 165, 0.772);
+    background-color: rgba(42, 161, 165, 0.412);
     color: #fff;
     padding-top: 100px;
 }
@@ -45,12 +45,12 @@ form input {
     font-size: 24px;
     background-color: #fff;
     border: none;
-    border-bottom: 3px solid #1187d1;
+    border-bottom: 3px solid #1187d18b;
     padding: 8px;
 }
 
 form button {
-    background-color: #1187d1;
+    background-color: #1187d18b;
     color: #fff;
     font-size: 24px;
     font-weight: bolder;
@@ -64,7 +64,7 @@ table {
 }
 
 table th {
-    border-bottom: 7px solid #1187d1;
+    border-bottom: 7px solid #1187d18b;
     padding: 16px;
     font-size: 24px;
     font-weight: bold;
