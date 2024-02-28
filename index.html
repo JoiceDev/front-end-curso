@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+    <button type="button" id="header-button">New image +</button>
+  </header>
+  <form>
+    <h2>Insert new image</h2>
+    <input type="url" required placeholder="image URL"/>
+    <button type="submit">To add</button>
+    <button type="reset" id="cancel-button">Cancel</button>
+  </form>
+  <ul>
+    <li> <img src="./images/foto3.jpg" alt="painting of a dog" ></li>
+    <div class="overlay-image-link">
+      <a href="./images/foto3.jpg" title="View full size image" target="_blank"></a>
+    </div>
+    <li> <img src="./images/foto4.jpg" alt="painting of a wolf" ></li>
+    <div class="overlay-image-link">
+      <a href="./images/foto4.jpg" title="View full size image" target="_blank"></a>
+    </div>
+    <li> <img src="./images/foto6.jpg" alt="painting of a albino lion" ></li>
+    <div class="overlay-image-link">
+      <a href="./images/foto6.jpg" title="View full size image" target="_blank"></a>
+    </div>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
