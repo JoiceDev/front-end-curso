@@ -10,9 +10,9 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         const newImageAddress = $('#new-image-address').val();
-        const newItem = $('<li></li>');
+        const newItem = $('<li style="display: none"></li>');
 
-        $(`img src="${newImageAddress}" />`).appendTo(newItem);
+        $(`<img src="${newImageAddress}" />`).appendTo(newItem);
         $(
             `<div class="overlay-image-link">
                 <a href="${newImageAddress}" target="_blank" title="View full size image">
@@ -21,5 +21,7 @@ $(document).ready(function() {
             </div>
     `).appendTo(newItem);
         $(newItem).appendTo('ul');
+        $(newItem).fadeIn(1000);
+        $('#new-image-address').val('');
     })
 })
