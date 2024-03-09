@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: rgb(182, 216, 198) ;
+    color: teal;
+    font-weight: bold;
+}
+
+h1 {
+    font-style: italic;
+}
+
+img {
+        width: 80px;
+        height: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px;
+}
+
+.header-container img {
+    max-width: 100px;
+    margin-left: 12px; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > *{
+    width: 100%;
+}
+
+
+.container > form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.container > form label,
+.container > form input {
+    width: 100%;
+    padding: 8px;
+    }
+
+.container > form input {
+    margin-bottom: 12px;
+}
+
+input:focus {
+    border: 2px solid teal;
+    outline: none;
+}
+
+#button {
+    background-color: teal;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    padding: 8px;
+    width: 35%;
+    border-radius: 18px;
+    height: 100%;
+    margin: 0;
+    display: block;
+    margin: 0 auto;
+}
