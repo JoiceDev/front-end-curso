@@ -118,27 +118,27 @@
 
                 <div class="form-campo">
                 <label for="none">Name:</label>
-                <input type="text" id="none">
+                <input type="text" id="none" name="name">
                 </div>
         
                 <div class="form-campo">
                 <label for="telephone">telephone:</label>
-                <input type="tel" id="telephone">
+                <input type="tel" id="telephone" name="telephone">
                 </div>
         
                 <div class="form-campo">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
                 </div>
         
                 <div class="form-campo">
                 <label for="interested-vehicle"> Interested Vehicle:</label>
-                <input type="text" id="interested-vehicle">
+                <input type="text" id="interested-vehicle" name="interestedVehicle">
                 </div>
         
                 <div class="form-campo">
                 <label for="message">Message:</label>
-                <textarea type="text" id="message"></textarea>
+                <textarea type="text" id="message" name="message"></textarea>
                 </div>
         
                 <button type="submit">Send</button>
@@ -173,17 +173,53 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
 
     <script>
         $(document).ready(function() {
             $('#carousel-images').slick({
                 autoplay: true
             });
-
             $('.hamburguer-menu').click(function() {
                 $('nav').slideToggle();
-            })
+            });
+            $('#telephone').mask('(00)00000-0000', {
+                placeholder: '(__)_____-____'
+            });
+            $('form').validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+    
+                    telephone: {
+                        required: true
+                    },
+
+                    message: {
+                        required: true
+                    },
+
+                    interestedVehicle: {
+                        required: false,
+                    }
+                },
+                submitHandler: function(form) {
+                    console.log(form)
+                },
+                invalidHandler: function(evento, validador) {
+                    let wrongFields = validador.numberOfInvalids();
+                    if (wrongFields) {
+                        alert (`There are ${wrongFields} required fields`)
+                    }
+                }
         })
+    })
     </script>
 </body>
 </html>
