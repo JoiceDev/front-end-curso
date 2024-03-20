@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+/*Menu Dropdown ↓*/
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*para centralizar na vertical */
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 56px;
+}
+
+.submenu {
+    display: none;
+    border: 3px solid darkred;
+    background-color: #fff;
+    position: absolute; /*para que ul do submenu 
+                        não seja considerado
+                        e deslocar o link quando 
+                        abrir a lista*/
+    left: 0;
+    max-width: 300px;
+    top: 100%; /* para indicar que acabou o elemento e 
+                a partir disso deve se começar o submenu*/
+}
+
+.menu > li {
+    float: left; 
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative; /* para conter o elemento
+                        filho que tem o position absolute.
+                        (não ultrapassa o container do lado)*/
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+} /* para que os submenus apareçam 
+    quando o cursor estiver sob o link do menu*/
+
+.menu li:hover {
+    border-color: darkred;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+/*Menu Dropdown ↑*/
+
+.conteudo {
+    display: grid; /*colunas e linhas*/
+    grid-template-columns: 70% 30%;/*Pra definir o layout*/
+}
+
+.noticia img {
+    max-width: 100%; /*define a largura máxima das imagens como 100%, 
+                        garantindo que elas não excedam a largura do contêiner 
+                        e mantenham a responsividade em diferentes tamanhos de tela*/
+}
+
+.destaque {
+    margin-bottom: 56px;
+}
+
+.destaque .noticia a {
+    display: flex; /*ativa o modelo de layout flexbox, permitindo que os elementos 
+                    sejam organizados em uma linha ou coluna*/
+    font-size: 2em;
+}
+
+.destaque .noticia img {
+    margin-right: 8px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+}
+
+aside {
+    padding-left: 40px;
+}
+
+aside .noticia {
+    margin-bottom: 24px;
+}
+
+.noticias {
+    display: grid;
+    grid-template-columns: 32.6% 32.6% 32.6%; /*ou repeat(3, 32.6%)*/
+    column-gap: 2%; /*espaçamento entre as colunas*/
+    row-gap: 5%;
+}
+
+@media screen and (max-width:767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque .noticia a {
+        display: block;
+        font-size: 1em;
+    }
+
+    .destaque .noticia img {
+        margin-right: 0;
+    }
+
+    .noticias {
+        display: block;
+    }
+
+    .noticias .noticia {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    .submenu {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }    
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .noticia a {
+        font-size: 1.5em;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .botao-menu {
+        display: none;
+    }
+}
