@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*header*/
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*para centralizar na vertical */
+}
+
+header {
+    padding: 2px 0;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -30px;
+}
+
+.submenu {
+    display: none;
+    border: 3px solid #ff007f;
+    background-color: #ffdd00d5;
+    position: absolute; /*para que ul do submenu 
+                        não seja considerado
+                        e deslocar o link quando 
+                        abrir a lista*/
+    left: 0;
+    max-width: 300px;
+    cursor: pointer;
+    top: 100%; /* para indicar que acabou o elemento e 
+                a partir disso deve se começar o submenu*/
+}
+
+.menu > li {
+    cursor: pointer;
+    float: left; 
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative; /* para conter o elemento
+                        filho que tem o position absolute.
+                        (não ultrapassa o container do lado)*/
+}
+
+.menu {
+    margin-top: -16px;
+}
+
+.menu li:hover .submenu {
+    display: block;
+} /* para que os submenus apareçam 
+    quando o cursor estiver sob o link do menu*/
+
+.menu li:hover {
+    border-color: #ff007f;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+li, li a {
+    font-size: 20px;
+}
+
+.right-align {
+    float: right;
+}
+
+.container {
+    padding: 28px;
+    margin-top: 8px; 
+}
+
+form {
+    margin-top: -50px; 
+}
+
+input {
+    margin-bottom: -20px; /* Adiciona uma margem negativa para mover o input para cima */
+    border-radius: 20px;
+    padding: 8px;
+    border-color: #ffdd00;
+}
+
+input:focus {
+    border-color: 2px solid #ffdd00; /* Nova cor, largura e estilo da borda quando em foco */
+}
+
+button {
+    margin-bottom: -20px; /* Adiciona uma margem negativa para mover para cima */
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffdd00cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*body*/
+
+body {
+    background-color: #ffdd00; 
+    background: linear-gradient(to bottom right, #ffdd00, #ff007f);
+    color: #fff;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+.about-us {
+    display: flex;
+    align-items: center; /* Alinhar os itens verticalmente */
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.about-us img {
+    width: auto;
+    height: 280px;
+    margin-right: 24px;
+    margin-top: -30px;
+}
+
+p {
+    margin-top: -50px;
+}
+
+/*Promotions*/
+
+.promotions {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    list-style: none;
+}
+
+.promotions h1 {
+    justify-content: flex-start;
+}
+
+.promotions img {
+    width: 200px;
+    height: 200px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.promotions li {
+    display: inline-block;
+    width: 220px; /* Ajuste a largura conforme necessário */
+    text-align: center;
+    margin: 10px;
+}
+
+.promotions .info {
+    margin-top: 12px;
+}
+
+.price {
+    text-decoration: line-through;
+    color: #cccccc7e;
+    font-weight: lighter;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+
+.promo-price span {
+    font-weight: bold;
+    color: #ffdd00;
+    font-size: 18px;
+}
+
+.price, .promo-price, button {
+    margin-top: 8px;
+    font-style: normal;
+}
+
+li button {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Estilos para dispositivos móveis (até 640px) */
+@media screen and (max-width: 640px) {
+    .container {
+        display: block; /* Mudando para exibição em bloco para ocupar toda a largura */
+        max-width: 100%; /* Definindo a largura máxima como 100% */
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header > h1 {
+        padding-bottom: 50px;
+        
+    }
+    .menu {
+        display: flex; /* Alterando o display do menu para bloco */
+        flex-wrap: wrap;
+        text-align: center; /* Centralizando o texto no menu */
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .submenu {
+        display: block; /* Alterando o display do submenu para bloco */
+        position: relative; /* Removendo o posicionamento fixo para o submenu */
+        width: 100%; /* Definindo a largura total para o submenu */
+        left: auto; /* Removendo o posicionamento à esquerda */
+        top: auto; /* Removendo o posicionamento superior */
+    }
+
+    .about-us {
+        text-align: center; /* Centralizando o texto */
+    }
+
+    .about-us img {
+        display: block; /* Alterando a exibição da imagem para bloco */
+        margin: 0 auto; /* Centralizando a imagem horizontalmente */
+        max-width: 100%; /* Garantindo que a imagem não ultrapasse a largura do container */
+        height: auto; /* Permitindo que a altura da imagem seja ajustada automaticamente */
+        margin-bottom: 70px;
+    }
+
+    .about-us p {
+        padding: 26px;
+    }
+
+    .promotions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .promotions li {
+        width: calc(50% - 10px); /* Definindo a largura dos itens das promoções */
+        margin: 5px; /* Adicionando margem entre os itens */
+        
+    }
+}
+/* Estilos para dispositivos com largura entre 641px e 1023px (tela de tablet) */
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 90%; 
+        margin: 0 auto; /* Centralizando o contêiner na tela */
+        }
+
+    .header > header > h1 {
+        padding-bottom: 70px;        
+    }
+
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        display: block; /* Alterando o display do menu para bloco */
+        text-align: center; /* Centralizando o texto no menu */
+    }
+
+    .menu li {
+        display: block; 
+    }
+
+    .submenu {
+        display: block; /* Alterando o display do submenu para bloco */
+        position: sticky; /* Removendo a posição absoluta para o submenu */
+        width: 100%; /* Definindo a largura total para o submenu */
+        left: auto; /* Removendo o posicionamento à esquerda */
+        top: auto; /* Removendo o posicionamento superior */
+    }
+
+    .about-us p {
+        padding-top: 70px;
+    }
+
+    .about-us img {
+        padding-left: 225px;
+    }
+}
+
+/* Estilos para dispositivos com largura maior ou igual a 1024px (desktop) */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px; /* Mantendo a largura máxima do contêiner */
+        margin: 0 auto; /* Centralizando o contêiner na tela */
+    }
+
+    .menu {
+        display: flex; /* Utilizando flexbox para o menu */
+        justify-content: flex-end; /* Alinhando o menu à direita */
+    }
+
+    .menu li {
+        margin-left: 16px; /* Adicionando margem entre os itens do menu */
+    }
+
+}
+
+
+
+
+
+

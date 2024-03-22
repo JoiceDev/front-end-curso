@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppies's Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container header">
+        <header>
+            <h1>Puppies's Store</h1>
+            <form class="right-align">
+                <input type="search" id="search" name="search" placeholder="Search"> 
+                <button type="submit">Search</button>
+            </form>
+    </div>
+    <nav class="container">
+        <ul class="menu">
+            <li><a href="http://">About Us</a></li>
+            <li>
+                Food and Snacks
+                <ul class="submenu">
+                    <li><a href="http://">Dogs</a></li>
+                    <li><a href="http://">Cats</a></li>
+                    <li><a href="http://">Others</a></li>
+                </ul>
+            </li>
+            <li>
+                Pharmacy
+                <ul class="submenu">
+                    <li><a href="http://">Vermifuge</a></li>
+                    <li><a href="http://">Supplements and Vitamins</a></li>
+                    <li><a href="http://">Medicines</a></li>
+                </ul>
+            </li>
+            <li>
+                Accesories
+                <ul class="submenu">
+                    <li><a href="http://">Feeders</a></li>
+                    <li><a href="http://">Beds and Houses</a></li>
+                    <li><a href="http://">Toys</a></li>
+                </ul>
+            </li>
+            <li>
+                Hygiene and Beauty
+                <ul class="submenu">
+                    <li><a href="http://">Soaps and Shampoos</a></li>
+                    <li><a href="http://">Sanitary Products</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="promotion-link">Promotions</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="container">
+        <h1 class="title">About Us</h1>
+    </div>
+    <div class="container about-us">
+        <img src="./images/store.png" alt="pet shop">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus repellat, autem impedit perspiciatis eveniet natus? Aliquid maxime, obcaecati distinctio est eaque mollitia, quia animi omnis, consectetur ipsa quaerat. Eaque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem vitae quos saepe impedit aliquam porro ipsa excepturi dolores odit vero natus fuga sunt error, vel perferendis? Amet distinctio debitis odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur, dolorum deleniti quam vel quasi doloremque aliquam laudantium quis, excepturi facere facilis sint explicabo ipsa alias reiciendis, eligendi officia ea?</p>
+    </div>
+    <div class="container" id="promotions-container">
+        <h1>Promotions</h1>
+        <ul class="promotions">
+            <li>
+                <img src="./images/housedog.png" alt=""><br>
+                <h4>Dog House</h4>
+                <p class="price">Price: $50</p>
+                <p class="promo-price">Promo Price: <span>$40</span></p>
+                <button type="button">Add to cart</button>
+            </li>
+            <li>
+                <img src="./images/coleira.png" alt=""><br>
+                <h4>Dog Collar</h4>
+                <p class="price">Price: $20</p>
+                <p class="promo-price">Promo Price: <span>$15</span></p>
+                <button type="button">Add to cart</button>
+            </li>
+            <li>
+                <img src="./images/beddog.png" alt=""><br>
+                <h4>Dog Bed</h4>
+                <p class="price">Price: $80</p>
+                <p class="promo-price">Promo Price: <span>$50</span></p>
+                <button type="button">Add to cart</button>
+            </li>
+            <li>
+                <img src="./images/pet-toys.png" alt=""><br>
+                <h4>Several Toys</h4>
+                <p class="price">Price: $30</p>
+                <p class="promo-price">Promo Price: <span>$20</span></p>
+                <button type="button">Add to cart</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const promotionLink = document.getElementById('promotion-link');
+        const promotionsContainer = document.getElementById('promotions-container');
+    
+        promotionLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+    
+            promotionsContainer.scrollIntoView({ behavior: 'smooth' }); // Rolamento suave para a seção de promoções
+        });
+    </script>
+</body>
+</html>
