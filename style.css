@@ -1,0 +1,13 @@
+.h2 {
+    padding: 16px;
+    font-style: italic;
+    margin-top: 16px;
+}
+
+body {
+    background-color: #cccccc78;
+}
+
+input {
+    border-radius: 16px;
+}
