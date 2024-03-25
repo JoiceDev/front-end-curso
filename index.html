@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Blog</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <h1>Nature Blog</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#around-the-world">Around the World</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#interesting">Interesting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="around-the-world">
+        <h2>Around the World</h2>
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item active">
+                    <img class="d-block" src="./images/alberta-2297204_640.jpg">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block" src="./images/mount-fuji-8010752_640.jpg">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block" src="./images/aurora-borealis-1032517_1280.jpg">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block" src="./images/nature.jpg">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" class="active" data-bs-target="carousel-exemplo" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="carousel-exemplo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="carousel-exemplo" data-bs-slide-to="3"></button>
+            </div>
+        </div>
+    <div>
+
+        <div class="container" id="interesting">
+            <h2>Interesting</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card text-bg-dark">
+                        <img src="./images/flowers-card.jpg">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Tíutulo do Card</h4>
+                            <h5 class="card-subtitle"> Subtítulo do Card</h5>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestiae error magnam magni rem rerum iure repellendus sapiente tempora a, inventore .</p>
+                                <p><a href="http://" class="btn btn-primary">Read more...</a></p>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            Posted at <time>25/03/2024 às 17:02:00</time>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-bg-dark">
+                        <img src="./images/panda-card.jpg">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Tíutulo do Card</h4>
+                            <h5 class="card-subtitle"> Subtítulo do Card</h5>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestiae error magnam magni rem rerum iure repellendus sapiente tempora a, inventore .</p>
+                                <p><a href="http://" class="btn btn-primary">Read more...</a></p>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            Posted at <time>25/03/2024 às 17:08:00</time>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-bg-dark">
+                        <img src="./images/iceland-card.jpg">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Tíutulo do Card</h4>
+                            <h5 class="card-subtitle"> Subtítulo do Card</h5>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestiae error magnam magni rem rerum iure repellendus sapiente tempora a, inventore .</p>
+                                <p><a href="http://" class="btn btn-primary">Read more...</a></p>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            Posted at <time>25/03/2024 às 17:12:00</time>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            
+        <script src="./lib/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+</html>
