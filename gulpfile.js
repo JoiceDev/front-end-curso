@@ -31,29 +31,8 @@ function compilaSass() {
         .pipe(gulp.dest('./build/styles'));
 }
 
-function funcaoPadrao(callback) {
-    setTimeout(function(){
-        console.log("Executando viaGulp");
-        callback();
-    }, 2000);
-}
-
-function dizOi(callback) {
-    setTimeout(function(){
-        console.log("olá Gulp");
-        dizTchau();
-        callback();
-    }, 1000);
-}
-
-function dizTchau() {
-    console.log("Tchau Gulp");
-}
-
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.sass = compilaSass;
-exports.watch = function () {
+exports.default = function () {
     gulp.watch('./source/styles/*.scss', { ignoreInitial: false }, compilaSass);
+    gulp.watch('./source/scripts/*.js', { ignoreInitial: false }, comprimeJavaScript);
+    gulp.watch('./source/images/*', { ignoreInitial: false }, comprimeImagens);
 }
-exports.javascript = comprimeJavaScript;
-exports.images = comprimeImagens;
