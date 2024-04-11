@@ -2,6 +2,9 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+#h1-header {
+    font-size: 36px;
+}
 .navbar {
     background-color: chocolate;
 }
@@ -11,8 +14,10 @@ body {
     color: orange;
 }
 
-#cabecalho .nav .nav-link, .navbar-brand,
-.navbar-brand:hover, .nav-cardapio .nav-link-active span:hover {
+#cabecalho .nav .nav-link, 
+.navbar-brand,
+.navbar-brand:hover, 
+.nav-cardapio .nav-link.active span:hover {
     color: #fff;
 }
 
@@ -28,12 +33,12 @@ body {
     color: chocolate;
 }
 
-#sobre, #cardapio {
+#sobre, #cardapio,#fale-conosco {
     background-color: rgba(210, 105, 30, 0.37);
 }
 
 .nav-cardapio .nav-link.active,
-#fale-conosco button {
+#fale-conosco button, .btn:hover, .btn {
     background-color: chocolate;
     color: #fff;
 }
