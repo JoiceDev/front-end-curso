@@ -2,6 +2,10 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+li {
+    list-style: none;
+}
+
 #h1-header {
     font-size: 36px;
 }
