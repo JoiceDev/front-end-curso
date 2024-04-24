@@ -1,0 +1,108 @@
+
+html {
+    height: 100%;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to right, #8795a1, #001f3f);
+}
+
+    
+    .hero__content {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        padding: 18px;
+
+        h1 {
+            font-size: 32px;
+        }
+        
+        &__image {
+            max-width: 80%;
+            height: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+            
+            img {
+                border-radius: 12px;
+                margin-top: 12px;
+            }
+            
+        }
+        
+        &__text {
+                flex: 1;
+                text-align: center; /* alinha o conteúdo no centro horizontal */
+                display: flex; /* torna o conteúdo um flex container */
+                align-items: center; /* alinha os itens no centro vertical */
+                justify-content: center; /* alinha os itens no centro horizontal */
+                flex-direction: column; /* define a direção dos itens como coluna */
+                margin-left: 18px;
+
+                &__p1 {
+                    font-size: 18px;
+                }
+
+                &__p2 {
+                    font-size: 12px;
+                    margin-top: -.5px;
+                    color: #8795a1;
+                }
+            }
+            
+
+            &__btn {
+                background-color: #001f3f;
+                color: #fff;
+                padding: 16px;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: bold;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent;
+                }
+        }
+    }
+
+    .temporadas__container {
+        display: flex;
+        justify-content: space-between; /* Alinha os itens horizontalmente com espaço entre eles */
+
+
+        &__item {
+            display: inline-block;
+            align-items: center;
+        }
+    }
+    
+
+        .news {
+            padding-left: 18px;
+        }
+
+        &__items {
+            display: flex; 
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+            justify-content: space-around; 
+            max-width: 1000px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+
+            &__item {
+                flex: 1; /* Cada item ocupa metade do espaço disponível */
+                max-width: 400px; /* Largura máxima dos itens */
+                margin: 10px; /* Espaçamento entre os itens */
+                text-align: left; /* Alinha o texto à esquerda */
+
+                img {
+                    width: 260px; 
+                    height: 180px; 
+                }
+            }
+        }
