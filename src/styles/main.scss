@@ -72,16 +72,23 @@ body {
     }
 
     .temporadas__container {
-        display: flex;
-        justify-content: space-between; /* Alinha os itens horizontalmente com espaço entre eles */
-
-
+        display: flex; 
+        flex-direction: row;
+        
         &__item {
-            display: inline-block;
-            align-items: center;
+            display: flex;
+            flex-direction: row;
+    
+            h3 {
+                margin-top: 0;
+            }
+        
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
-    
 
         .news {
             padding-left: 18px;
