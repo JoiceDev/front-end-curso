@@ -40,8 +40,8 @@ header .profile-avatar {
   display: block;
   margin: 0 auto 24px;
   border-radius: 50%;
-  max-width: 160px;
-  max-height: 180px;
+  max-width: 96px;
+  max-height: 96px;
 }
 .profile-bio {
   text-align: center;
