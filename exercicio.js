@@ -18,6 +18,12 @@ function Cão() {
     this.som = 'au au';
 }
 
+function GoldenRetriever() {
+    Animal.call(this, 'Golden Retriever', 'Buddy');
+    this.som = 'au au';
+}
+
 // Criando instâncias de Gato e Cão
 const gato1 = new Gato();
 const cachorro1 = new Cão();
+const cachorro2 = new GoldenRetriever();
