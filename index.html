@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBAC motors</title>
+    <title>CodeCar by JoiceDev</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>EBAC motors</h1>
+            <h1>CodeCar</h1>
             <div class="hamburguer-menu">
                 <span></span>
                 <span></span>
@@ -46,7 +46,7 @@
             <img src="./images/loja.jpg" alt="garage store">
         </div>
         <div class="About">
-        <h2>About EBAC Motors</h2>
+        <h2>About CodeCar</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi repellat, laborum dicta eos ducimus vitae, eligendi consequatur eum maiores saepe repellendus autem tempora assumenda nostrum, asperiores dolorem mollitia sit repudiandae?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at recusandae aliquid quo amet asperiores repudiandae? Exercitationem deserunt distinctio sed eligendi est, esse vel velit dolor blanditiis neque tenetur quod.</p>
     </div>
@@ -118,27 +118,27 @@
 
                 <div class="form-campo">
                 <label for="none">Name:</label>
-                <input type="text" id="none" name="name">
+                <input type="text" id="none">
                 </div>
         
                 <div class="form-campo">
                 <label for="telephone">telephone:</label>
-                <input type="tel" id="telephone" name="telephone">
+                <input type="tel" id="telephone">
                 </div>
         
                 <div class="form-campo">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email">
                 </div>
         
                 <div class="form-campo">
                 <label for="interested-vehicle"> Interested Vehicle:</label>
-                <input type="text" id="interested-vehicle" name="interestedVehicle">
+                <input type="text" id="interested-vehicle">
                 </div>
         
                 <div class="form-campo">
                 <label for="message">Message:</label>
-                <textarea type="text" id="message" name="message"></textarea>
+                <textarea type="text" id="message"></textarea>
                 </div>
         
                 <button type="submit">Send</button>
@@ -149,7 +149,7 @@
 
     <footer>
         <div class="container">
-            <p>2024 &copy; EBAC Motors - Todos os direitos reservados</p>
+            <p>2024 &copy; CodeCar by JoiceDev - Todos os direitos reservados</p>
             <ul class="redes-sociais">
                 <li>
                     <a href="#">
@@ -173,53 +173,17 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/jquery.mask.min.js"></script>
-    <script src="./js/jquery.validate.min.js"></script>
 
     <script>
         $(document).ready(function() {
             $('#carousel-images').slick({
                 autoplay: true
             });
+
             $('.hamburguer-menu').click(function() {
                 $('nav').slideToggle();
-            });
-            $('#telephone').mask('(00)00000-0000', {
-                placeholder: '(__)_____-____'
-            });
-            $('form').validate({
-                rules: {
-                    name: {
-                        required: true
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-    
-                    telephone: {
-                        required: true
-                    },
-
-                    message: {
-                        required: true
-                    },
-
-                    interestedVehicle: {
-                        required: false,
-                    }
-                },
-                submitHandler: function(form) {
-                    console.log(form)
-                },
-                invalidHandler: function(evento, validador) {
-                    let wrongFields = validador.numberOfInvalids();
-                    if (wrongFields) {
-                        alert (`There are ${wrongFields} required fields`)
-                    }
-                }
+            })
         })
-    })
     </script>
 </body>
 </html>
