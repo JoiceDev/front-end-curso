@@ -47,6 +47,10 @@ header {
                         filho que tem o position absolute.
                         (não ultrapassa o container do lado)*/
 }
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #fff; /* Define a cor do link como branca */
+}
 
 .menu {
     margin-top: -16px;
