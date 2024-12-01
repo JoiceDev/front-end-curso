@@ -157,7 +157,7 @@ body {
     }
 
 p {
-    margin-top: -30px;
+    margin-top: -16px;
 }
 
 .promotions {
@@ -430,9 +430,10 @@ li button {
         margin-bottom: 70px;
     }
 
-    .about-us p {
-        padding: 26px;
+    .about-us .container {
+        margin-top: -10px;  /* ajuste para o valor desejado */
     }
+    
 
     .promotions {
         display: flex;

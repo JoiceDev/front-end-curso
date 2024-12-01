@@ -6,7 +6,8 @@
     <title>Puppies's Store</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/inputmask/dist/inputmask.min.js"></script> <!-- Incluindo a biblioteca -->
+
 </head>
 <body>
     <div class="container header">
@@ -36,7 +37,7 @@
                     <li><a href="http://">Sanitary Products</a></li>
                 </ul>
             </li>
-            <li><a href="#" id="promotion-link">Sale</a></li>
+            <li><a href="#sale" id="promotion-link">Sale</a></li>
             <li><a href="#contact" id="promotion-link">Contact</a></li>
         </ul>
     </nav>
@@ -55,7 +56,7 @@
             laboriosam minima ipsa asperiores nulla eum temporibus, natus vero cumque distinctio! 
             Provident, debitis doloribus.</p>        
     </div>
-    <div class="container" id="promotions-container">
+    <div class="container" id="sale">
         <h1>Sale</h1>
         <ul class="promotions">
             <li>
@@ -160,36 +161,19 @@
         </div>
     </section>
 </div>
-
-<!-- Bibliotecas necessárias -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
-
 <script>
-    const promotionLink = document.getElementById('promotion-link');
-    const promotionsContainer = document.getElementById('promotions-container');
-
-    promotionLink.addEventListener('click', function(event) {
-        event.preventDefault(); 
-
-        promotionsContainer.scrollIntoView({ behavior: 'smooth' }); // Rolamento suave para a seção de promoções
-    });
-
     document.addEventListener("DOMContentLoaded", () => {  
-        // Verifique se o campo existe antes de aplicar a máscara
         const phoneInput = document.getElementById('phone');
         const emailInput = document.getElementById('email');
 
         if (phoneInput) {
-            Inputmask("(99) 99999-9999").mask(phoneInput);  
+            Inputmask("(99) 99999-9999").mask(phoneInput);  // Aplica a máscara
         }
 
         if (emailInput) {
-            Inputmask({ alias: "email" }).mask(emailInput);  
+            Inputmask({ alias: "email" }).mask(emailInput);  // Aplica a máscara de email
         }
     });
 </script>
-
-
 </body>
 </html>
