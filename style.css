@@ -292,7 +292,7 @@ li button {
                 transition: color 0.3s;
         
                 &:hover {
-                    color: #d16f0e; /* Cor de destaque ao passar o mouse */
+                    color: #d16f0e; 
                 }
             }
         }
@@ -319,7 +319,7 @@ li button {
                 font-size: 1rem;
                 cursor: pointer;
                 transition: background-color 0.3s;
-                margin-bottom: -20px; /* Adiciona uma margem negativa para mover para cima */
+                margin-bottom: -20px; 
                 border: 1px solid #d16f0e;
                 font-weight: bold;
                 padding: 10px;
@@ -383,7 +383,7 @@ li button {
 @media screen and (max-width: 640px) {
     .container {
         display: block; /* Mudando para exibição em bloco para ocupar toda a largura */
-        max-width: 100%; /* Definindo a largura máxima como 100% */
+        max-width: 100%; 
     }
 
     body {
@@ -403,7 +403,7 @@ li button {
     .menu {
         display: flex; /* Alterando o display do menu para bloco */
         flex-wrap: wrap;
-        text-align: center; /* Centralizando o texto no menu */
+        text-align: center; 
     }
 
     .menu li {
@@ -411,11 +411,11 @@ li button {
     }
 
     .submenu {
-        display: block; /* Alterando o display do submenu para bloco */
+        display: block; 
         position: relative; /* Removendo o posicionamento fixo para o submenu */
         width: 100%; /* Definindo a largura total para o submenu */
         left: auto; /* Removendo o posicionamento à esquerda */
-        top: auto; /* Removendo o posicionamento superior */
+        top: auto; 
     }
 
     .about-us {
@@ -423,10 +423,10 @@ li button {
     }
 
     .about-us img {
-        display: block; /* Alterando a exibição da imagem para bloco */
+        display: block; 
         margin: 0 auto; /* Centralizando a imagem horizontalmente */
         max-width: 100%; /* Garantindo que a imagem não ultrapasse a largura do container */
-        height: auto; /* Permitindo que a altura da imagem seja ajustada automaticamente */
+        height: auto;
         margin-bottom: 70px;
     }
 
@@ -441,8 +441,8 @@ li button {
     }
 
     .promotions li {
-        width: calc(50% - 10px); /* Definindo a largura dos itens das promoções */
-        margin: 5px; /* Adicionando margem entre os itens */
+        width: calc(50% - 10px); 
+        margin: 5px; /* margem entre os itens */
         
     }
 }
@@ -468,8 +468,8 @@ li button {
     }
 
     .menu {
-        display: block; /* Alterando o display do menu para bloco */
-        text-align: center; /* Centralizando o texto no menu */
+        display: block;
+        text-align: center; /* Centralizando o texto */
     }
 
     .menu li {
@@ -477,11 +477,11 @@ li button {
     }
 
     .submenu {
-        display: block; /* Alterando o display do submenu para bloco */
+        display: block;
         position: sticky; /* Removendo a posição absoluta para o submenu */
-        width: 100%; /* Definindo a largura total para o submenu */
-        left: auto; /* Removendo o posicionamento à esquerda */
-        top: auto; /* Removendo o posicionamento superior */
+        width: 100%; 
+        left: auto; 
+        top: auto; 
     }
 
     .about-us p {
