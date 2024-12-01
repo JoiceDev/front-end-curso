@@ -2,12 +2,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 /*header*/
-.container {
+.container, section {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    
+}
+
+h1, h3 {
+    color: #d16f0e;
 }
 
 header .container {
@@ -18,19 +24,21 @@ header .container {
 
 header {
     padding: 2px 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid black;
     margin-bottom: -30px;
 }
 
 .submenu {
     display: none;
-    border: 3px solid #ff007f;
-    background-color: #ffdd00d5;
+    border:2px solid #d16f0e;
+    background-color: #d47c25;
     position: absolute; /*para que ul do submenu 
                         não seja considerado
                         e deslocar o link quando 
                         abrir a lista*/
     left: 0;
+    color: #fff;
+    border-radius: 4px;
     max-width: 300px;
     cursor: pointer;
     top: 100%; /* para indicar que acabou o elemento e 
@@ -48,12 +56,15 @@ header {
                         (não ultrapassa o container do lado)*/
 }
 a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #fff; /* Define a cor do link como branca */
+    text-decoration: none;
+    color: #d16f0e; 
 }
 
 .menu {
-    margin-top: -16px;
+    display: flex;           /* Torna o menu um contêiner flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;     /* Centraliza os itens verticalmente */
+    margin-top: -16px;       /* Mantém a margem top conforme você deseja */
 }
 
 .menu li:hover .submenu {
@@ -62,7 +73,7 @@ a {
     quando o cursor estiver sob o link do menu*/
 
 .menu li:hover {
-    border-color: #ff007f;
+    border-color: #d16f0e;
 }
 
 .submenu li {
@@ -70,8 +81,12 @@ a {
     padding: 8px;
 }
 
-li, li a {
-    font-size: 20px;
+.submenu li > a {
+    color: #fff;
+}
+
+li, a {
+    font-size: 18px;
 }
 
 .right-align {
@@ -89,63 +104,69 @@ form {
 
 input {
     margin-bottom: -20px; /* Adiciona uma margem negativa para mover o input para cima */
-    border-radius: 20px;
+    border-radius: 6px;
     padding: 8px;
-    border-color: #ffdd00;
+    border-color: #d16f0e;
+    background-color: #cbcaca0a;
 }
 
 input:focus {
-    border-color: 2px solid #ffdd00; /* Nova cor, largura e estilo da borda quando em foco */
+    border-color: 1px solid #d16f0e; /* Nova cor, largura e estilo da borda quando em foco */
 }
 
 button {
     margin-bottom: -20px; /* Adiciona uma margem negativa para mover para cima */
-    border: none;
-    border-radius: 10px;
+    border: 1px solid #d16f0e;
+    border-radius: 6px;
+    font-weight: bold;
     padding: 10px;
-    background-color: #ffdd00cc;
-    color: #fff;
+    background-color: #d1700e4e;
+    color: #d16f0e;
     cursor: pointer;
 }
 
 /*body*/
 
 body {
-    background-color: #ffdd00; 
-    background: linear-gradient(to bottom right, #ffdd00, #ff007f);
-    color: #fff;
-    font-weight: bolder;
-    font-style: italic;
+    background-color: #d1700e18;
+    color: black;
+    font-weight: bold;
+    font-style: normal;
 }
 
 
-.about-us {
+.about-us > p {
     display: flex;
     align-items: center; /* Alinhar os itens verticalmente */
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid black;
     font-size: 18px;
+    color: rgba(0, 0, 0, 0.87);
     font-weight: lighter;
     font-style: italic;
+    padding-bottom: 28px;
+        
 }
 
-.about-us img {
-    width: auto;
-    height: 280px;
-    margin-right: 24px;
+.logo {
+    display: block;
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+
+    }
+
+p {
     margin-top: -30px;
 }
 
-p {
-    margin-top: -50px;
-}
-
-/*Promotions*/
-
 .promotions {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
-    text-align: left;
     list-style: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 24px;
 }
 
 .promotions h1 {
@@ -161,9 +182,9 @@ p {
 
 .promotions li {
     display: inline-block;
-    width: 220px; /* Ajuste a largura conforme necessário */
+    width: 180px;
     text-align: center;
-    margin: 10px;
+    margin: 10px;    
 }
 
 .promotions .info {
@@ -172,7 +193,7 @@ p {
 
 .price {
     text-decoration: line-through;
-    color: #cccccc7e;
+    color: #161414de;
     font-weight: lighter;
     font-size: 16px;
     margin-bottom: -10px;
@@ -180,7 +201,7 @@ p {
 
 .promo-price span {
     font-weight: bold;
-    color: #ffdd00;
+    color: #d16f0e;
     font-size: 18px;
 }
 
@@ -193,6 +214,170 @@ li button {
     font-weight: bold;
     font-size: 12px;
 }
+
+.promotions li {
+    list-style: none; /* Remove os marcadores */
+    border: 1px solid #d16f0e; /* Adiciona uma borda fina */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Sombra leve */
+    padding: 16px; /* Espaçamento interno */
+    margin: 16px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: #ffffff13; /* Fundo branco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.promotions li:hover {
+    transform: translateY(-5px); /* Eleva o item no hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.promotions img {
+    max-width: 100%; /* Faz a imagem ocupar a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 12px; /* Espaçamento abaixo da imagem */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+}
+
+#contact {
+    background-color: #f9f9f900;
+    
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        padding-bottom: 32px;
+        }
+    
+        h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #d16f0e;
+        text-align: left;
+        }
+    
+        .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    
+        div {
+            background: #ffffff00;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #d16f0e;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.826);
+        }
+    
+        h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 16px; 
+            text-align: center;
+        }
+    
+        form,
+        p,
+        .social-links {
+            display: flex;
+            gap: 2px;
+            justify-content: space-evenly; /* Centraliza horizontalmente */
+            align-items: center;
+            margin-top: 24px; /* Espaço entre os conteúdos */
+        
+            a {
+                color: #333;
+                font-size: 2rem;
+                transition: color 0.3s;
+        
+                &:hover {
+                    color: #d16f0e; /* Cor de destaque ao passar o mouse */
+                }
+            }
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        
+            input,
+            textarea {
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+                resize: none;
+            }
+        
+            button {
+                padding: 12px;
+                background-color: #d1700e4e;
+                color: #d16f0e;
+                border-radius: 6px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                margin-bottom: -20px; /* Adiciona uma margem negativa para mover para cima */
+                border: 1px solid #d16f0e;
+                font-weight: bold;
+                padding: 10px;
+                margin-bottom: 16px;
+        
+                &:hover {
+                    background-color: #d16f0e;
+                                }
+            }
+        }
+        
+    
+            &:hover {
+                color: #d16f0e;
+            }
+            }
+        }
+    
+        p {
+        font-size: 1.1rem;
+        color: #666;
+        }
+    
+    
+        @media (max-width: 768px) {
+        .contact-methods {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        }
+    
+        @media (max-width: 480px) {
+        h2 {
+            font-size: 2rem;
+        }
+    
+        .container {
+            padding: 0 15px;
+        }
+    
+        form input,
+        form textarea,
+        form button {
+            font-size: 0.9rem;
+        }
+        }  
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .fale-conosco .row {
+        flex-direction: column;
+    }
+    .fale-conosco .col-md-6 {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 /* Estilos para dispositivos móveis (até 640px) */
 @media screen and (max-width: 640px) {
@@ -261,6 +446,8 @@ li button {
         
     }
 }
+
+
 /* Estilos para dispositivos com largura entre 641px e 1023px (tela de tablet) */
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
